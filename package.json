@@ -1,7 +1,7 @@
 {
-  "name": "mycell-clinic",
+  "name": "du-clinic",
   "version": "1.0.0",
-  "description": "MYCELL Clinic - Korean Beauty & Plastic Surgery Clinic with META pixel integration",
+  "description": "DU Clinic - Korean Beauty & Plastic Surgery Clinic with META pixel integration",
   "main": "index.html",
   "scripts": {
     "dev": "vercel dev",

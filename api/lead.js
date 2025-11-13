@@ -1,8 +1,8 @@
 // /api/lead.js  — Vercel Serverless Function (Node 18/20)
 const crypto = require('crypto');
 
-const PIXEL_ID = '742160555457168';
-const ACCESS_TOKEN = process.env.META_ACCESS_TOKEN || 'EAAKnxXipVygBPbaQyNHEvDsjkIwZAIM369UXCt9ysEFOF0HYZBeCadogBt0tZBFjTmeg8z0iK94CDtZCgmE3yjN99sCL3litw7lGNkmWTYGyiRfc18HD51Wx1NJrs00D2ICnItwGX9mOy9XOhxVoGU4uxpgT7M37KQstxa4U9d3U3SeBNlLxxoo50gzSZCdLbHgZDZD';        // Vercel env
+const PIXEL_ID = '3372319072916447';
+const ACCESS_TOKEN = process.env.META_ACCESS_TOKEN || 'EAFgLuciDE54BP0bWj1C474VdE3OUYZC39P9RsU8h5XQrZB93XD6nsqwGy5o9w4ZBuspQ3JJKv4kq7bdIgD6sLI9zFFovODOmHFYfJ5OrQfHPnw6G2LnnzsO7Sd5yxD3ORNOhDxJSF4y7bb7TsfU88ao9sW3ucQXafXKncGB55hZAnjbmn0fZAvZAZBXjZB3FmBYQ0wZDZD';        // Vercel env
 
 function sha256Lower(s) {
   return crypto.createHash('sha256').update((s || '').trim().toLowerCase()).digest('hex');
@@ -63,7 +63,7 @@ module.exports = async (req, res) => {
         event_time: Math.floor(Date.now()/1000),
         event_id: eventId || `srv-${Date.now()}`,
         action_source: 'website',
-        event_source_url: eventSourceUrl || 'https://mycellth.vercel.app/',
+        event_source_url: eventSourceUrl || 'https://du-clinic.vercel.app/',
         user_data: {
           em: email ? [sha256Lower(email)] : undefined,
           ph: phone ? [sha256Phone(phone)] : undefined,
