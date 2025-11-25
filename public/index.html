@@ -109,6 +109,24 @@
             margin: 0 auto;
         }
 
+        /* ========== HEADER IMAGE SECTION ========== */
+        .header-image-section {
+            background: linear-gradient(180deg, #0f3460 0%, #1a1a2e 100%);
+            padding: 0 20px 40px;
+        }
+
+        .header-image-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .header-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
         /* ========== TRUST SECTION ========== */
         .trust-section {
             background: white;
@@ -217,36 +235,13 @@
         }
 
         .review-images {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2px;
-            background: #eee;
+            width: 100%;
         }
 
         .review-images img {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
-        }
-
-        .review-label {
-            position: absolute;
-            bottom: 8px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-        }
-
-        .review-images .before-img {
-            position: relative;
-        }
-
-        .review-images .after-img {
-            position: relative;
         }
 
         .review-content {
@@ -460,6 +455,13 @@
         </div>
     </section>
 
+    <!-- ========== HEADER IMAGE SECTION ========== -->
+    <section class="header-image-section">
+        <div class="header-image-container">
+            <img src="/header-image.png" alt="DU Clinic - Premium Korean Plastic Surgery" class="header-image" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 300%22><defs><linearGradient id=%22hg%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22><stop offset=%220%25%22 stop-color=%22%231a1a2e%22/><stop offset=%22100%25%22 stop-color=%22%23d4af37%22/></linearGradient></defs><rect fill=%22url(%23hg)%22 width=%22600%22 height=%22300%22 rx=%2215%22/><text x=%2250%25%22 y=%2245%25%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2224%22 font-weight=%22bold%22>DU CLINIC</text><text x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 fill=%22rgba(255,255,255,0.8)%22 font-size=%2214%22>Header Image Placeholder</text></svg>'">
+        </div>
+    </section>
+
     <!-- ========== TRUST SECTION ========== -->
     <section class="trust-section">
         <h2 class="trust-title">ทำไมคนไทยถึงเลือก DU Clinic?</h2>
@@ -501,12 +503,7 @@
                 <!-- Review Card 1 -->
                 <div class="review-card">
                     <div class="review-images">
-                        <div class="before-img">
-                            <img src="/review-1-before.jpg" alt="Before" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23e0e0e0%22 width=%22200%22 height=%22180%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2214%22>BEFORE</text></svg>'">
-                        </div>
-                        <div class="after-img">
-                            <img src="/review-1-after.jpg" alt="After" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23d4af37%22 width=%22200%22 height=%22180%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2214%22>AFTER</text></svg>'">
-                        </div>
+                        <img src="/review-1.png" alt="Before & After" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 280 200%22><defs><linearGradient id=%22g1%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%220%25%22><stop offset=%220%25%22 stop-color=%22%23e0e0e0%22/><stop offset=%2250%25%22 stop-color=%22%23e0e0e0%22/><stop offset=%2250%25%22 stop-color=%22%23d4af37%22/><stop offset=%22100%25%22 stop-color=%22%23d4af37%22/></linearGradient></defs><rect fill=%22url(%23g1)%22 width=%22280%22 height=%22200%22/><text x=%2225%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2214%22>BEFORE</text><text x=%2275%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2214%22>AFTER</text></svg>'">
                     </div>
                     <div class="review-content">
                         <span class="review-tag">👃 เสริมจมูก</span>
@@ -518,12 +515,7 @@
                 <!-- Review Card 2 -->
                 <div class="review-card">
                     <div class="review-images">
-                        <div class="before-img">
-                            <img src="/review-2-before.jpg" alt="Before" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23e0e0e0%22 width=%22200%22 height=%22180%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2214%22>BEFORE</text></svg>'">
-                        </div>
-                        <div class="after-img">
-                            <img src="/review-2-after.jpg" alt="After" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23d4af37%22 width=%22200%22 height=%22180%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2214%22>AFTER</text></svg>'">
-                        </div>
+                        <img src="/review-2.png" alt="Before & After" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 280 200%22><defs><linearGradient id=%22g2%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%220%25%22><stop offset=%220%25%22 stop-color=%22%23e0e0e0%22/><stop offset=%2250%25%22 stop-color=%22%23e0e0e0%22/><stop offset=%2250%25%22 stop-color=%22%23d4af37%22/><stop offset=%22100%25%22 stop-color=%22%23d4af37%22/></linearGradient></defs><rect fill=%22url(%23g2)%22 width=%22280%22 height=%22200%22/><text x=%2225%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2214%22>BEFORE</text><text x=%2275%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2214%22>AFTER</text></svg>'">
                     </div>
                     <div class="review-content">
                         <span class="review-tag">👁️ ทำตาสองชั้น</span>
@@ -535,12 +527,7 @@
                 <!-- Review Card 3 -->
                 <div class="review-card">
                     <div class="review-images">
-                        <div class="before-img">
-                            <img src="/review-3-before.jpg" alt="Before" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23e0e0e0%22 width=%22200%22 height=%22180%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2214%22>BEFORE</text></svg>'">
-                        </div>
-                        <div class="after-img">
-                            <img src="/review-3-after.jpg" alt="After" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23d4af37%22 width=%22200%22 height=%22180%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2214%22>AFTER</text></svg>'">
-                        </div>
+                        <img src="/review-3.png" alt="Before & After" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 280 200%22><defs><linearGradient id=%22g3%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%220%25%22><stop offset=%220%25%22 stop-color=%22%23e0e0e0%22/><stop offset=%2250%25%22 stop-color=%22%23e0e0e0%22/><stop offset=%2250%25%22 stop-color=%22%23d4af37%22/><stop offset=%22100%25%22 stop-color=%22%23d4af37%22/></linearGradient></defs><rect fill=%22url(%23g3)%22 width=%22280%22 height=%22200%22/><text x=%2225%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2214%22>BEFORE</text><text x=%2275%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2214%22>AFTER</text></svg>'">
                     </div>
                     <div class="review-content">
                         <span class="review-tag">✨ จมูก + ตา</span>
