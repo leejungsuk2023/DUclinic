@@ -8,7 +8,13 @@
       "Bash(git remote add:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(vercel --prod:*)",
+      "Bash(vercel alias set:*)",
+      "Bash(cat:*)",
+      "WebFetch(domain:www.mycellth.store)",
+      "WebFetch(domain:du-clinic.vercel.app)",
+      "Bash(vercel ls:*)"
     ],
     "deny": [],
     "ask": []
