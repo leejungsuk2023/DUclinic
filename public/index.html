@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="facebook-domain-verification" content="nhtlwpx5azsslibe836spfqtbzqad8" />
-    <title>DU Clinic - คลินิกความงามเกาหลี | CAPI Integrated</title>
+    <title>DU Clinic - ศัลยกรรมสไตล์เกาหลี สำหรับคนไทย</title>
+
+    <!-- Google Fonts - Prompt for Thai -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -14,8 +17,8 @@
     t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
     (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init','3372319072916447');   // ✅ DU Clinic 픽셀 ID
-    fbq('track','PageView');          // 페이지 진입 추적
+    fbq('init','3372319072916447');
+    fbq('track','PageView');
     console.log('📱 Facebook Pixel 초기화 완료 - Pixel ID: 3372319072916447');
     </script>
     <noscript>
@@ -23,196 +26,561 @@
            src="https://www.facebook.com/tr?id=3372319072916447&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Facebook Pixel Code -->
-    
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Prompt', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
+            font-family: 'Prompt', sans-serif;
+            line-height: 1.7;
+            color: #2d2d2d;
+            background: #f8f9fa;
+            padding-bottom: 100px;
         }
-        
-        .container {
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            padding: 60px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></svg>');
+            background-size: 50px 50px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
             max-width: 600px;
             margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
-        
-        .logo {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #667eea;
+
+        .doctor-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .doctor-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid #d4af37;
+            object-fit: cover;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 1.4;
             margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
-        
-        .subtitle {
-            font-size: 1.2rem;
+
+        .hero p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.85);
+            font-weight: 300;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        /* ========== TRUST SECTION ========== */
+        .trust-section {
+            background: white;
+            padding: 50px 20px;
+            margin-top: -30px;
+            border-radius: 30px 30px 0 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .trust-title {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 35px;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .trust-item {
+            text-align: center;
+            padding: 25px 10px;
+            background: linear-gradient(145deg, #f8f9fa, #ffffff);
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .trust-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .trust-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .trust-item h3 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .trust-item p {
+            font-size: 0.75rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* ========== REVIEW SECTION ========== */
+        .review-section {
+            background: #f8f9fa;
+            padding: 50px 20px;
+        }
+
+        .review-title {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+
+        .review-subtitle {
+            text-align: center;
+            font-size: 0.9rem;
             color: #666;
             margin-bottom: 30px;
         }
 
-        .header-image-container {
-            width: 100%;
-            max-width: 700px;
-            margin: 20px auto;
-            text-align: center;
+        .review-slider {
+            max-width: 600px;
+            margin: 0 auto;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
         }
 
-        .header-image {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .instruction {
-            background: #f8f9ff;
-            padding: 25px;
-            border-radius: 10px;
-            margin: 20px 0;
-            border-left: 4px solid #667eea;
-        }
-        
-        .step {
-            margin: 15px 0;
-            font-size: 1.1rem;
-        }
-        
-        .step-number {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            background: #667eea;
-            color: white;
-            border-radius: 50%;
-            line-height: 30px;
-            margin-right: 10px;
-            font-weight: bold;
-        }
-        
-        .line-button {
-            display: inline-block;
-            background: #00c851;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin: 20px 0;
-            transition: background 0.3s ease;
-        }
-        
-        .line-button:hover {
-            background: #007e33;
-        }
-        
-        .contact-info {
-            background: #fff3cd;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            border: 1px solid #ffeaa7;
-        }
-        
-        .hours {
-            font-weight: bold;
-            color: #e17055;
-        }
-        
-        .auto-redirect {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.9);
-            color: white;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
+        .review-slider::-webkit-scrollbar {
             display: none;
-            z-index: 1000;
         }
-        
-        .loading {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #667eea;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
+
+        .review-track {
+            display: flex;
+            gap: 15px;
+            padding: 10px 5px;
+        }
+
+        .review-card {
+            flex: 0 0 280px;
+            scroll-snap-align: center;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .review-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            background: #eee;
+        }
+
+        .review-images img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .review-label {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+        }
+
+        .review-images .before-img {
+            position: relative;
+        }
+
+        .review-images .after-img {
+            position: relative;
+        }
+
+        .review-content {
+            padding: 20px;
+        }
+
+        .review-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4af37, #f4d03f);
+            color: #1a1a2e;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .review-text {
+            font-size: 0.9rem;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .review-author {
+            margin-top: 12px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* ========== PROMO SECTION ========== */
+        .promo-section {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .promo-box {
+            max-width: 500px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #fff9e6, #fff5d6);
+            border: 2px solid #d4af37;
+            border-radius: 20px;
+            padding: 30px 25px;
+        }
+
+        .promo-badge {
+            display: inline-block;
+            background: #d4af37;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .promo-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+
+        .promo-list {
+            text-align: left;
+            max-width: 300px;
             margin: 20px auto;
         }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+
+        .promo-list li {
+            list-style: none;
+            padding: 8px 0;
+            font-size: 0.95rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .promo-list li::before {
+            content: '✓';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: #28a745;
+            color: white;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* ========== STICKY CTA ========== */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #00c851, #00a844);
+            padding: 15px 20px;
+            z-index: 1000;
+            box-shadow: 0 -5px 30px rgba(0,0,0,0.2);
+        }
+
+        .sticky-cta-content {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .sticky-cta-text {
+            color: white;
+            flex: 1;
+        }
+
+        .sticky-cta-text .highlight {
+            font-size: 0.75rem;
+            background: rgba(255,255,255,0.2);
+            padding: 3px 10px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .sticky-cta-text .main-text {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .sticky-cta-button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            color: #00a844;
+            padding: 14px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .sticky-cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        .sticky-cta-button svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .trust-item {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                padding: 18px 20px;
+                gap: 15px;
+            }
+
+            .trust-icon {
+                font-size: 2rem;
+                margin-bottom: 0;
+            }
+
+            .trust-item-content {
+                flex: 1;
+            }
+
+            .sticky-cta-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .sticky-cta-button {
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">DU Clinic</div>
-        <div class="subtitle">คลินิกความงามและผิวหนังแบบเกาหลี</div>
 
-        <!-- Header Image Placeholder -->
-        <div class="header-image-container">
-            <img src="/header-image.png" alt="DU Clinic - Korean Beauty Clinic" class="header-image">
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="doctor-badge">🏥 Board Certified Plastic Surgeon</div>
+
+            <!-- Doctor Profile Image Placeholder -->
+            <img src="/doctor-profile.png" alt="Dr. Kim - DU Clinic" class="doctor-image" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 140 140%22><rect fill=%22%23d4af37%22 width=%22140%22 height=%22140%22/><text x=%2250%%22 y=%2255%%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2240%22>👨‍⚕️</text></svg>'">
+
+            <h1>ศัลยกรรมสไตล์เกาหลี<br>ที่เข้าใจโครงหน้าคนไทยที่สุด</h1>
+            <p>คุณหมอคิมดูแลเอง 1:1 ทุกเคส<br>ไม่ใช่โรงงานศัลยกรรม</p>
         </div>
+    </section>
 
-        <div class="instruction">
-            <h3>วิธีการรับคำปรึกษาความงาม</h3>
-            
-            <div class="step">
-                <span class="step-number">1</span>
-                กรอกข้อมูลและปัญหาที่ต้องการปรับปรุง
+    <!-- ========== TRUST SECTION ========== -->
+    <section class="trust-section">
+        <h2 class="trust-title">ทำไมคนไทยถึงเลือก DU Clinic?</h2>
+
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-icon">📹</div>
+                <div class="trust-item-content">
+                    <h3>CCTV Safe</h3>
+                    <p>มีกล้องวงจรปิด (CCTV) ในห้องผ่าตัด</p>
+                </div>
             </div>
-            
-            <div class="step">
-                <span class="step-number">2</span>
-                เพิ่ม LINE Official Account
+
+            <div class="trust-item">
+                <div class="trust-icon">🇹🇭</div>
+                <div class="trust-item-content">
+                    <h3>Thai Care</h3>
+                    <p>ล่ามไทยดูแลส่วนตัว ตลอดการรักษา</p>
+                </div>
             </div>
-            
-            <div class="step">
-                <span class="step-number">3</span>
-                ส่งรูปภาพและปรึกษาแพทย์เฉพาะทาง
-            </div>
-            
-            <div class="step">
-                <span class="step-number">4</span>
-                รับคำแนะนำการรักษาที่เหมาะสม
+
+            <div class="trust-item">
+                <div class="trust-icon">⚡</div>
+                <div class="trust-item-content">
+                    <h3>Fast Recovery</h3>
+                    <p>ผ่าตัดศุกร์ ทำงานจันทร์ได้เลย</p>
+                </div>
             </div>
         </div>
-        
-        <a href="https://line.me/R/ti/p/@duprs.th" class="line-button" id="lineButton">
-            ปรึกษาแพทย์เฉพาะทาง
-        </a>
+    </section>
 
-        <div class="contact-info">
-            <p><strong>LINE ID:</strong> @duprs.th</p>
-            <p class="hours">เวลาให้คำปรึกษา: จันทร์-ศุกร์ 9:00-18:00</p>
-            <p style="color: #e17055;">หยุดวันพฤหัสบดี เสาร์ อาทิตย์</p>
+    <!-- ========== REVIEW SECTION ========== -->
+    <section class="review-section">
+        <h2 class="review-title">รีวิวจากคนไทยในเกาหลี</h2>
+        <p class="review-subtitle">ผลลัพธ์จริงจากลูกค้าคนไทย</p>
+
+        <div class="review-slider">
+            <div class="review-track">
+                <!-- Review Card 1 -->
+                <div class="review-card">
+                    <div class="review-images">
+                        <div class="before-img">
+                            <img src="/review-1-before.jpg" alt="Before" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23e0e0e0%22 width=%22200%22 height=%22180%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2214%22>BEFORE</text></svg>'">
+                        </div>
+                        <div class="after-img">
+                            <img src="/review-1-after.jpg" alt="After" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23d4af37%22 width=%22200%22 height=%22180%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2214%22>AFTER</text></svg>'">
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <span class="review-tag">👃 เสริมจมูก</span>
+                        <p class="review-text">"ธรรมชาติมาก เข้ากับใบหน้า ไม่เจ็บเลย หายเร็วมากค่ะ"</p>
+                        <p class="review-author">— คุณมิน (พนักงานบริษัท, กรุงเทพ)</p>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="review-card">
+                    <div class="review-images">
+                        <div class="before-img">
+                            <img src="/review-2-before.jpg" alt="Before" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23e0e0e0%22 width=%22200%22 height=%22180%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2214%22>BEFORE</text></svg>'">
+                        </div>
+                        <div class="after-img">
+                            <img src="/review-2-after.jpg" alt="After" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23d4af37%22 width=%22200%22 height=%22180%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2214%22>AFTER</text></svg>'">
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <span class="review-tag">👁️ ทำตาสองชั้น</span>
+                        <p class="review-text">"ตาโตขึ้นแต่ยังดูเป็นตัวเอง หมอเก่งมากค่ะ"</p>
+                        <p class="review-author">— คุณเบล (นักศึกษา, เชียงใหม่)</p>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="review-card">
+                    <div class="review-images">
+                        <div class="before-img">
+                            <img src="/review-3-before.jpg" alt="Before" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23e0e0e0%22 width=%22200%22 height=%22180%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2214%22>BEFORE</text></svg>'">
+                        </div>
+                        <div class="after-img">
+                            <img src="/review-3-after.jpg" alt="After" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23d4af37%22 width=%22200%22 height=%22180%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2214%22>AFTER</text></svg>'">
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <span class="review-tag">✨ จมูก + ตา</span>
+                        <p class="review-text">"ทำทั้งจมูกและตา เปลี่ยนไปเลย แต่ยังดูธรรมชาติ"</p>
+                        <p class="review-author">— คุณแพร (Influencer, กรุงเทพ)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROMO SECTION ========== -->
+    <section class="promo-section">
+        <div class="promo-box">
+            <span class="promo-badge">🎁 โปรโมชั่นพิเศษ</span>
+            <h3 class="promo-title">แอดไลน์วันนี้ รับฟรี!</h3>
+            <ul class="promo-list">
+                <li>ค่าปรึกษาแพทย์ มูลค่า 100,000 วอน</li>
+                <li>ภาพจำลองใบหน้าหลังผ่าตัด (AI)</li>
+                <li>ใบเสนอราคาส่วนตัว</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ========== STICKY CTA ========== -->
+    <div class="sticky-cta">
+        <div class="sticky-cta-content">
+            <div class="sticky-cta-text">
+                <span class="highlight">🔥 จำกัด 5 ท่าน/วัน</span>
+                <div class="main-text">ส่งรูปให้คุณหมอประเมินฟรี!</div>
+            </div>
+            <a href="https://line.me/R/ti/p/@duprs.th" class="sticky-cta-button" id="lineButton">
+                <svg viewBox="0 0 24 24" fill="#00B900">
+                    <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.349 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                </svg>
+                แอดไลน์
+            </a>
         </div>
     </div>
-    
-    <div class="auto-redirect" id="redirectModal">
-        <h3>กำลังเชื่อมต่อไปยัง LINE...</h3>
-        <div class="loading"></div>
-        <p>กรุณารอสักครู่</p>
-    </div>
-    
+
 <script>
   // ====== 유틸 ======
   // 모바일 디바이스 감지 함수
@@ -223,9 +591,9 @@
   // LINE URL: 모바일은 line:// 스킴, PC는 https://
   function getLineURL() {
     if (isMobile()) {
-      return 'line://ti/p/@duprs.th';  // 모바일: 앱 즉시 실행
+      return 'line://ti/p/@duprs.th';
     } else {
-      return 'https://line.me/R/ti/p/@duprs.th';  // PC: 웹 브라우저
+      return 'https://line.me/R/ti/p/@duprs.th';
     }
   }
 
@@ -268,7 +636,6 @@
     return getCookie('_fbc') || '';
   }
 
-  // 픽셀 로드 상태 확인 유틸리티
   function checkPixelStatus() {
     console.log('🔍 픽셀 상태 확인:');
     console.log('  - fbq 함수 존재:', typeof window.fbq === 'function');
@@ -280,7 +647,6 @@
     }
   }
 
-  // 초기 쿠키 세팅
   ensureFbcFromQuery();
   ensureFbpCookie();
 
@@ -289,14 +655,11 @@
     try {
       console.log('📨 sendLeadToServer() 시작, eventId:', eventId);
 
-      const email = (document.querySelector('input[name="email"]') || {}).value || '';
-      const phone = (document.querySelector('input[name="phone"]') || {}).value || '';
-
       const payload = {
         eventId,
         eventSourceUrl: location.href,
-        email,
-        phone,
+        email: '',
+        phone: '',
         fbp: getCookie('_fbp') || '',
         fbc: getFbc(),
         userAgent: navigator.userAgent
@@ -309,7 +672,7 @@
         method: 'POST',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify(payload),
-        keepalive: true // 탭 닫혀도 전송 시도
+        keepalive: true
       });
 
       console.log('📡 서버 응답 상태:', response.status);
@@ -327,27 +690,24 @@
     }
   }
 
-  // ====== 리드 전송 훅(버튼/폼에 연결) ======
+  // ====== 리드 전송 훅 ======
   function trackLeadWithDedup() {
     console.log('🚀 trackLeadWithDedup() 호출됨');
     const eventId = genEventId();
     console.log('📋 생성된 eventId:', eventId);
 
-    // 브라우저 픽셀(Lead) - 전환 이벤트
     if (typeof window.fbq === 'function') {
       console.log('✅ fbq 함수 존재 - 브라우저 픽셀 전송');
       fbq('trackCustom', 'LineFriendAdd', {}, { eventID: eventId });
       console.log('📊 Facebook Pixel LineFriendAdd(trackCustom) 이벤트 전송 완료');
     } else {
-      console.log('❌ fbq 함수 없음 - 픽셀 로드 실패, 큐에 추가 시도');
-      // 픽셀이 아직 로드되지 않은 경우 큐에 저장
+      console.log('❌ fbq 함수 없음 - 픽셀 로드 실패');
       if (window.fbq && window.fbq.queue) {
         window.fbq.queue.push(['track', 'LineFriendAdd', {}, { eventID: eventId }]);
         console.log('📋 이벤트 큐에 LineFriendAdd 이벤트 추가됨');
       }
     }
 
-    // 서버(CAPI) 동시 전송
     console.log('🌐 서버 CAPI 전송 시작');
     sendLeadToServer(eventId);
 
@@ -357,54 +717,28 @@
   // DOM 로드 완료 후 이벤트 리스너 등록
   function initEventListeners() {
     console.log('🔧 이벤트 리스너 초기화 시작');
-    // 픽셀 상태 확인
     checkPixelStatus();
 
-    // 1) 버튼 클릭 시 Lead
     const lineBtn = document.getElementById('lineButton');
     if (lineBtn) {
-      // 디바이스에 맞는 URL로 버튼 href 업데이트
       lineBtn.href = LINE_URL;
       console.log('✅ 라인 버튼 찾음 - 이벤트 리스너 등록');
+
       lineBtn.addEventListener('click', function(event) {
-        event.preventDefault(); // 기본 이동을 막아 리드 트래킹 시간을 확보
+        event.preventDefault();
         console.log('🎯 라인 버튼 클릭됨');
 
-        // Lead 이벤트 전송 (비동기 - CAPI와 픽셀 동시)
         const eventId = trackLeadWithDedup();
 
-        // CAPI/Fbq 호출이 시작될 시간을 준 뒤 같은 탭에서 LINE으로 이동
         setTimeout(function() {
-          window.location.href = lineBtn.href;
+          window.location.href = LINE_URL;
         }, 1200);
       });
     } else {
       console.log('❌ 라인 버튼을 찾을 수 없음');
     }
-
-    // 2) 폼 제출 시 Lead
-    const leadForm = document.getElementById('leadForm');
-    if (leadForm) {
-      console.log('✅ 리드 폼 찾음 - 이벤트 리스너 등록');
-      leadForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        trackLeadWithDedup();
-      });
-    }
-
-    // 3) 페이지 체류 10초 후 자동 안내
-    setTimeout(function() {
-      if (confirm('คุณต้องการปรึกษาแพทย์เฉพาะทางผ่าน LINE หรือไม่?')) {
-        const eventId = trackLeadWithDedup();
-        setTimeout(function() {
-          const target = lineBtn ? lineBtn.href : LINE_URL;
-          window.location.href = target;
-        }, 1200);
-      }
-    }, 10000);
   }
 
-  // DOM 로드 완료 시 이벤트 리스너 초기화
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initEventListeners);
   } else {
