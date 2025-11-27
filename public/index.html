@@ -93,13 +93,15 @@
         }
 
         .header-image-container {
-            max-width: 600px;
+            max-width: 400px;
             margin: 0 auto;
         }
 
-        .header-image {
+        .header-video {
             width: 100%;
-            height: auto;
+            aspect-ratio: 9/16;
+            border-radius: 15px;
+            border: none;
             border-radius: 15px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
@@ -453,10 +455,15 @@
         </div>
     </section>
 
-    <!-- ========== HEADER IMAGE SECTION ========== -->
+    <!-- ========== HEADER VIDEO SECTION ========== -->
     <section class="header-image-section">
         <div class="header-image-container">
-            <img src="/header-image.png" alt="DU Clinic - Premium Korean Plastic Surgery" class="header-image" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 300%22><defs><linearGradient id=%22hg%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22><stop offset=%220%25%22 stop-color=%22%231a1a2e%22/><stop offset=%22100%25%22 stop-color=%22%23d4af37%22/></linearGradient></defs><rect fill=%22url(%23hg)%22 width=%22600%22 height=%22300%22 rx=%2215%22/><text x=%2250%25%22 y=%2245%25%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2224%22 font-weight=%22bold%22>DU CLINIC</text><text x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 fill=%22rgba(255,255,255,0.8)%22 font-size=%2214%22>Header Image Placeholder</text></svg>'">
+            <iframe
+                class="header-video"
+                src="https://www.youtube.com/embed/owVKelUob4Q?autoplay=1&mute=1&loop=1&playlist=owVKelUob4Q&playsinline=1&controls=0&showinfo=0&rel=0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
         </div>
     </section>
 
